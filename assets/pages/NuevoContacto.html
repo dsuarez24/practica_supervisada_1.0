@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Ejercicio JSON</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
-	</head>
-	<body>
-		<section>
-			<form action="http://10.100.23.16/services.php" method="post" class="form-horizontal">
-				<header><legend>Ejercicio</legend></header>			
-				<fieldset>
-					<div class="control-group">
-						<label class="control-label">Nombre</label>
-						<div class="controls">
-							<input type="text" placeholder="Nombre" name="name" required>
-						</div>	                	
-					</div>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio JSON</title>
+    <link rel="stylesheet" type="text/css" href="../estilos/nuevoc.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/NuevoContacto.js"></script>
 
-					<div class="control-group">
-						
-						<div class="controls">
-							<input type="email" placeholder="Correo electrónico" name="email-group[]" required>
-							<button id="addEmail" type="" class="btn btn-success"><strong>+</strong></button>
-							<!-- <button id="removeEmail" type="" class="btn btn-danger"><i class="icon-minus"></i></button> -->
-							<div id="email_inputs" style="width: 250px"></div>
-						</div>	                	
-					</div>
-					
-	                <div class="control-group">
-						<label class="control-label">Teléfono</label>
-						<div class="controls">
-							<input type="text" placeholder="Teléfono" name="phone-group[]" required>
-         <button id="addPhone" type="" class="btn btn-success"><strong>+</strong></button>
-							<!-- <button id="removePhone" type="" class="btn btn-danger"><i class="icon-minus"></i></button> -->
-							<div id="phone_inputs" style="width: 250px"></div>
-						</div>	                	
-					</div>
+    <style>
+   
+    </style>
+</head>
+<body>
+<section>
+    <form id="contactForm" action="http://10.100.23.16/services.php" method="post" class="form-horizontal">
+        <header>
+            <legend>Nuevo Contacto</legend>
+        </header>
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label">Nombre</label>
+                <div class="controls">
+                    <input type="text" placeholder="Nombre" name="name" required>
+                </div>
+            </div>
 
-	                
+            <div class="control-group">
+                <label class="control-label">Correo Electrónico</label>
+                <div class="controls">
+                    <input type="email" placeholder="Correo electrónico" name="email-group[]" required>
+                    <button id="addEmail" type="button" class="btn btn-success"><strong>+</strong></button>
+                </div>
+            </div>
 
-	                <hr/>
-	                
-	                <div class="control-group">
-						<div class="controls">
-							<button type="submit" class="btn btn-primary btn-large">Enviar</button>
-						</div>	                	
-					</div>	                               
-				</fieldset>
-			</form>
-		</section>			
-	</body>
+            <div class="control-group">
+                <label class="control-label">Teléfono</label>
+                <div class="controls">
+                    <input type="text" placeholder="Teléfono" name="phone-group[]" required>
+                    <button id="addPhone" type="button" class="btn btn-success"><strong>+</strong></button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="control-group">
+                <div class="controls">
+                    <button id="submitBtn" type="submit" class="btn btn-primary btn-large">Agregar</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</section>
+
+
+
+</body>
 </html>
